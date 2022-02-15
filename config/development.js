@@ -1,4 +1,7 @@
 module.exports = {
-  "test1": 'development-key',
-  "test2": "not aws"
+  "db":{
+    "name": 'test-dbname'
+  },
+  "another-secret": 'not-a-dev-secret',
+  "api-key": "a-secret",
 }

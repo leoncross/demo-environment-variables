@@ -1,19 +1,18 @@
 {
-  "name": "test",
+  "name": "demo-environment-variables",
   "version": "1.0.0",
-  "description": "",
+  "description": "example repo that shows how to handle environment variables",
   "main": "index.js",
   "scripts": {
+    "env:prod": "aws-env-variables --secretsManagerId='prod/example-service'",
     "start:dev": "NODE_ENV=development node index.js",
     "start:prod": "NODE_ENV=production node index.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "aws-sdk": "^2.1046.0",
-    "config": "^3.3.6"
-  },
   "dependencies": {
-    "express": "^4.17.2"
+    "aws-env-variables": "^1.0.0",
+    "config": "^3.3.6",
+    "dotenv": "^16.0.0"
   }
 }

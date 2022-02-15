@@ -1,10 +1,7 @@
-const {asyncConfig} = require('config/async');
-const {getSSMParamStoreSecret} = require('./async')
-
-const configs = {
-  "test1": asyncConfig(getSSMParamStoreSecret('super-secret-api-key')),
-  "test2": "not aws"
+module.exports = {
+  "db":{
+    "name": process.env.DB_NAME
+  },
+  "another-secret": process.env.somethingelse,
+  "api-key": "234lkjh5243h234jklh",
 }
-
-module.exports = configs
-

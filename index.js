@@ -1,12 +1,7 @@
-const {resolveAsyncConfigs} = require('config/async');
+require('dotenv').config()
 const config = require('config')
 
-resolveAsyncConfigs(config)
-  .then(() => {
+console.log(process.env.NODE_ENV)
 
-    // Run typical entry stuff here
-
-    console.log(config.get('test1'));
-    console.log(config.get('test2'));
-  });
-
+console.log(config.get('db.name'));
+console.log(config.get('another-secret'))
